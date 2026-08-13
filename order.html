@@ -21,12 +21,116 @@
     </header>
 
     <main>
-      <h1>Pre-order</h1>
+      <h1>Place a Pre-Order</h1>
 
-      <p>
-        Our pre-order form is coming soon. Please check back later to place your
-        order in advance.
-      </p>
+        <p>
+          Our pre-order form is now available. Please provide your details and
+          preferred pickup time.
+        </p>
+
+        <form>
+          <fieldset>
+            <legend>Who is picking up?</legend>
+
+            <label for="name">Name</label>
+            <input
+              class="field"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+
+            <label for="email">Email</label>
+            <input
+              class="field"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Pickup day</legend>
+
+            <div class="choice">
+              <input
+                type="radio"
+                id="saturday"
+                name="pickup-day"
+                value="Saturday"
+                checked
+              />
+              <label for="saturday">Saturday</label>
+            </div>
+
+            <div class="choice">
+              <input
+                type="radio"
+                id="sunday"
+                name="pickup-day"
+                value="Sunday"
+              />
+              <label for="sunday">Sunday</label>
+            </div>
+
+            <label for="pickup-time">Pickup time</label>
+            <select class="field" id="pickup-time" name="pickup-time">
+              <option value="09:00">09:00</option>
+              <option value="11:00">11:00</option>
+              <option value="13:00">13:00</option>
+              <option value="15:00">15:00</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your order</legend>
+
+            <div class="choice">
+              <input
+                type="checkbox"
+                id="croissant"
+                name="order"
+                value="Butter Croissant"
+              />
+              <label for="croissant">Butter Croissant</label>
+            </div>
+
+            <div class="choice">
+              <input
+                type="checkbox"
+                id="cake"
+                name="order"
+                value="Chocolate Cake"
+              />
+              <label for="cake">Chocolate Cake</label>
+            </div>
+
+            <div class="choice">
+              <input
+                type="checkbox"
+                id="bread"
+                name="order"
+                value="Artisan Bread"
+              />
+              <label for="bread">Artisan Bread</label>
+            </div>
+
+            <label for="notes">Notes</label>
+            <textarea
+              class="field"
+              id="notes"
+              name="notes"
+              rows="5"
+              placeholder="Any special requests?"
+            ></textarea>
+          </fieldset>
+
+          <button type="submit">Submit Pre-Order</button>
+        </form>
     </main>
 
     <footer>
